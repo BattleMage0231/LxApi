@@ -3,8 +3,9 @@ using LxApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
-builder.Services.AddSingleton<IMongoDBService, MongoDBService>();
+builder.Services.Configure<MongoSettings>(builder.Configuration.GetSection("MongoDB"));
+builder.Services.AddSingleton<IMongoService, MongoService>();
+builder.Services.AddSingleton<IEntryFRService, EntryFRService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
