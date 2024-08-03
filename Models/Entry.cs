@@ -25,7 +25,7 @@ public class Entry {
 
     public string Key { get; set; } = null!;
 
-    public string Definition { get; set; } = null!;
+    public string? Definition { get; set; }
 
-    public List<string> Examples { get; set; } = null!;
+    public List<string> Examples { get; set; } = [];
 }

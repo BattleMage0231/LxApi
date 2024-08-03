@@ -26,6 +26,12 @@ public class EntriesService : IEntriesService {
         await _entryCollection.InsertOneAsync(entry);
     }
 
+    public async Task UpdateAsync(string id, Entry updatedEntry) {
+        if(ObjectId.TryParse(id, out _)) {
+            await _entryCollection.ReplaceOneAsync(x => x.Id == id, updatedEntry);
+        }
+    }
+
     public async Task DeleteAsync(string id) {
         if(ObjectId.TryParse(id, out _)) {
             await _entryCollection.DeleteOneAsync(x => x.Id == id);

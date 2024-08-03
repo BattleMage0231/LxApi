@@ -9,5 +9,7 @@ public interface IEntriesService {
 
     public Task CreateAsync(Entry entry);
 
+    public Task UpdateAsync(string id, Entry updatedEntry);
+
     public Task DeleteAsync(string id);
 }
