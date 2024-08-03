@@ -4,14 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LxApi.Controllers;
 
-using Entry = EntryFR;
-
 [ApiController]
 [Route("api/entry")]
 public class EntriesFRController : ControllerBase {
-    private readonly IEntriesFRService _entriesService;
+    private readonly IEntriesService _entriesService;
 
-    public EntriesFRController(IEntriesFRService entriesService) {
+    public EntriesFRController(IEntriesService entriesService) {
         _entriesService = entriesService;
     }
 

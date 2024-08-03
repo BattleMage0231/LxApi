@@ -2,9 +2,7 @@ using LxApi.Models;
 
 namespace LxApi.Services;
 
-using Entry = EntryFR;
-
-public interface IEntriesFRService {
+public interface IEntriesService {
     public Task<List<Entry>> GetAllAsync();
 
     public Task CreateAsync(Entry entry);

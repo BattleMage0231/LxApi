@@ -4,20 +4,4 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace LxApi.Models;
 
-public enum ClassFR {
-    Noun, Verb, Adjective, Adverb, Preposition, Pronoun
-}
-
-public class EntryFR {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string? Id { get; set; }
-
-    public ClassFR Class { get; set; }
-
-    public string Key { get; set; } = null!;
-
-    public string Definition { get; set; } = null!;
-
-    public List<string> Examples { get; set; } = null!;
-}
+public class EntryFR : Entry {}

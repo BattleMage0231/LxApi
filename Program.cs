@@ -17,7 +17,7 @@ builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.C
 builder.Services.Configure<JsonOptions>(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.Configure<MongoSettings>(builder.Configuration.GetSection("MongoDB"));
 builder.Services.AddSingleton<IMongoService, MongoService>();
-builder.Services.AddSingleton<IEntriesFRService, EntriesFRService>();
+builder.Services.AddSingleton<IEntriesService, EntriesService>();
 builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

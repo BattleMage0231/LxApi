@@ -12,5 +12,5 @@ public class MongoService : IMongoService {
         _db = client.GetDatabase(settings.Value.DatabaseName);
     }
 
-    public IMongoCollection<EntryFR> EntriesFR => _db.GetCollection<EntryFR>("EntriesFR");
+    public IMongoCollection<Entry> Entries => _db.GetCollection<Entry>("Entries");
 }

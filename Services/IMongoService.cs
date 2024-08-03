@@ -4,5 +4,5 @@ using MongoDB.Driver;
 namespace LxApi.Services;
 
 public interface IMongoService {
-    public IMongoCollection<EntryFR> EntriesFR { get; }
+    public IMongoCollection<Entry> Entries { get; }
 }

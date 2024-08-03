@@ -3,13 +3,11 @@ using MongoDB.Driver;
 
 namespace LxApi.Services;
 
-using Entry = EntryFR;
-
-public class EntriesFRService : IEntriesFRService {
+public class EntriesService : IEntriesService {
     private readonly IMongoCollection<Entry> _entryCollection;
 
-    public EntriesFRService(IMongoService mongo) {
-        _entryCollection = mongo.EntriesFR;
+    public EntriesService(IMongoService mongo) {
+        _entryCollection = mongo.Entries;
     }
 
     public async Task<List<Entry>> GetAllAsync() {
