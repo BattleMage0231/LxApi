@@ -14,5 +14,20 @@ public class EntriesFRController : ControllerBase {
     }
 
     [HttpGet]
-    public async Task<List<Entry>> Get() => await _entriesService.GetAllAsync();
+    public async Task<List<Entry>> GetAll() => await _entriesService.GetAllAsync();
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Entry>> GetById(string id) {
+        var entry = await _entriesService.GetByIdAsync(id);
+        if(entry is null) {
+            return NotFound();
+        }
+        return entry;
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Post([FromBody] Entry newEntry) {
+        await _entriesService.CreateAsync(newEntry);
+        return CreatedAtAction(nameof(GetById), new { id = newEntry.Id }, newEntry);
+    }
 }
