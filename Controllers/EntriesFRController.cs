@@ -7,7 +7,7 @@ namespace LxApi.Controllers;
 using Entry = EntryFR;
 
 [ApiController]
-[Route("api/aa")]
+[Route("api/ab")]
 public class EntriesFRController : ControllerBase {
     private readonly IEntriesFRService _entriesService;
 

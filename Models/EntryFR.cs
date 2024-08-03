@@ -13,8 +13,6 @@ public class EntryFR {
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
 
-    [JsonConverter(typeof(JsonStringEnumConverter))]
-    [BsonRepresentation(BsonType.String)]
     public ClassFR Class { get; set; }
 
     public string Key { get; set; } = null!;
