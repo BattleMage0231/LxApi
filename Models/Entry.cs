@@ -5,10 +5,6 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace LxApi.Models;
 
-public enum Language {
-    FR
-}
-
 public enum Class {
     Noun, Verb, Adjective, Adverb, Preposition, Pronoun
 }
@@ -19,8 +15,6 @@ public abstract class Entry {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
-
-    public Language Language { get; set; }
 
     public Class Class { get; set; }
 
