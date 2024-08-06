@@ -1,3 +1,4 @@
+using LxApi.Models.Languages;
 using System.Text.Json.Serialization;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
@@ -13,8 +14,8 @@ public enum Class {
 }
 
 [BsonDiscriminator(RootClass = true)]
-[BsonKnownTypes(typeof(EntryFR))]
-public class Entry {
+[BsonKnownTypes(typeof(FREntry))]
+public abstract class Entry {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
@@ -28,4 +29,6 @@ public class Entry {
     public string? Definition { get; set; }
 
     public List<string> Examples { get; set; } = [];
+
+    public List<string> Synonyms { get; set; } = [];
 }

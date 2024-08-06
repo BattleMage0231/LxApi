@@ -2,14 +2,14 @@ using LxApi.Models;
 
 namespace LxApi.Services;
 
-public interface IEntriesService {
-    public Task<List<Entry>> GetAllAsync();
+public interface IEntriesService<T> where T : Entry {
+    public Task<List<T>> GetAllAsync();
 
-    public Task<Entry?> GetByIdAsync(string id);
+    public Task<T?> GetByIdAsync(string id);
 
-    public Task CreateAsync(Entry entry);
+    public Task CreateAsync(T entry);
 
-    public Task UpdateAsync(string id, Entry updatedEntry);
+    public Task UpdateAsync(string id, T updatedEntry);
 
     public Task DeleteAsync(string id);
 }
