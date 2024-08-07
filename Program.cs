@@ -19,8 +19,10 @@ builder.Services.Configure<JsonOptions>(options => options.JsonSerializerOptions
 builder.Services.Configure<MongoSettings>(builder.Configuration.GetSection("MongoDB"));
 builder.Services.AddSingleton<IMongoService, MongoService>();
 builder.Services.AddSingleton(typeof(IEntriesService<>), typeof(EntriesService<>));
+builder.Services.AddSingleton(typeof(ISearchService<>), typeof(SearchService<>));
 builder.Services.AddControllers().AddJsonOptions(options => {
     options.JsonSerializerOptions.PropertyNamingPolicy = null;
+    options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
     options.JsonSerializerOptions.Converters.Add(new PolymorphicJsonConverter<FREntry>());
 });
 builder.Services.AddEndpointsApiExplorer();
