@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace LxApi.Controllers;
 
 [ApiController]
-public abstract class BaseEntriesController<T>(IEntriesService<T> entriesService) : ControllerBase where T : Entry {
+public abstract class BaseEntriesController<T>(IEntriesService<T> entriesService) : ControllerBase where T : BaseEntry {
     private readonly IEntriesService<T> _entriesService = entriesService;
 
     [HttpGet]

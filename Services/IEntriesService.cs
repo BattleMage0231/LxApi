@@ -2,7 +2,7 @@ using LxApi.Models;
 
 namespace LxApi.Services;
 
-public interface IEntriesService<T> where T : Entry {
+public interface IEntriesService<T> where T : BaseEntry {
     public Task<List<T>> GetAllAsync();
 
     public Task<T?> GetByIdAsync(string id);

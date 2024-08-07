@@ -4,8 +4,8 @@ using MongoDB.Driver;
 
 namespace LxApi.Services;
 
-public class EntriesService<T>(IMongoService mongo) : IEntriesService<T> where T : Entry {
-    private readonly IMongoCollection<Entry> _entryCollection = mongo.Entries;
+public class EntriesService<T>(IMongoService mongo) : IEntriesService<T> where T : BaseEntry {
+    private readonly IMongoCollection<BaseEntry> _entryCollection = mongo.Entries;
 
     public async Task<List<T>> GetAllAsync() {
         var list = await _entryCollection.Find(entry => entry is T).ToListAsync();
