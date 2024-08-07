@@ -1,9 +1,5 @@
 namespace LxApi.Models.Languages;
 
-public enum FRNounFormType {
-    MasculineSingular, MasculinePlural, FeminineSingular, FemininePlural
-}
-
 public class FRNounForm : BaseForm {
     public FRGender? Gender { get; set; }
 

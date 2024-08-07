@@ -18,16 +18,16 @@ public class DerivedTypeAttribute(Type type, string discrim) : Attribute {
 }
 
 public class PolymorphicJsonConverter<T> : JsonConverter<T> {
-    private static readonly string DiscriminatorName;
+    private static readonly string discriminatorName;
 
-    private static readonly ReadOnlyDictionary<string, Type> DiscriminatorToSubtypeMap;
+    private static readonly ReadOnlyDictionary<string, Type> discriminatorToSubtypeMap;
 
-    private static readonly ReadOnlyDictionary<Type, string> SubtypeToDiscriminatorMap;
+    private static readonly ReadOnlyDictionary<Type, string> subtypeToDiscriminatorMap;
 
     static PolymorphicJsonConverter() {
         var polymorphicAttribute = typeof(T).GetCustomAttribute<PolymorphicAttribute>();
         var derivedTypeAttributes = typeof(T).GetCustomAttributes<DerivedTypeAttribute>().ToList();
-        DiscriminatorName = (polymorphicAttribute?.TypeDiscriminatorPropertyName) ?? "$type";
+        discriminatorName = (polymorphicAttribute?.TypeDiscriminatorPropertyName) ?? "$type";
         var discrimDict = new Dictionary<string, Type>();
         var subtypeDict = new Dictionary<Type, string>();
         foreach(var derivedType in derivedTypeAttributes) {
@@ -37,8 +37,8 @@ public class PolymorphicJsonConverter<T> : JsonConverter<T> {
             discrimDict.Add(derivedType.TypeDiscriminator, derivedType.DerivedType);
             subtypeDict.Add(derivedType.DerivedType, derivedType.TypeDiscriminator);
         }
-        DiscriminatorToSubtypeMap = new ReadOnlyDictionary<string, Type>(discrimDict);
-        SubtypeToDiscriminatorMap = new ReadOnlyDictionary<Type, string>(subtypeDict);
+        discriminatorToSubtypeMap = new ReadOnlyDictionary<string, Type>(discrimDict);
+        subtypeToDiscriminatorMap = new ReadOnlyDictionary<Type, string>(subtypeDict);
     }
 
     public override bool CanConvert(Type type) => typeof(T).IsAssignableFrom(type);
@@ -52,11 +52,11 @@ public class PolymorphicJsonConverter<T> : JsonConverter<T> {
     public override T? Read(ref Utf8JsonReader reader, Type objectType, JsonSerializerOptions options) {
         using var doc = JsonDocument.ParseValue(ref reader);
         var root = doc.RootElement;
-        var discrimField = root.GetProperty(DiscriminatorName);
+        var discrimField = root.GetProperty(discriminatorName);
         if(discrimField.GetString() is not string typeName) {
-            throw new JsonException($"Could not find string property {DiscriminatorName}");
+            throw new JsonException($"Could not find string property {discriminatorName}");
         }
-        if(!DiscriminatorToSubtypeMap.TryGetValue(typeName, out Type? type)) {
+        if(!discriminatorToSubtypeMap.TryGetValue(typeName, out Type? type)) {
             throw new JsonException($"Unknown type {type}");
         }
         return (T?) doc.Deserialize(type, GetBaseOptions(options));
@@ -65,7 +65,7 @@ public class PolymorphicJsonConverter<T> : JsonConverter<T> {
     public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options) {
         var type = value!.GetType();
         writer.WriteStartObject();
-        writer.WriteString(DiscriminatorName, SubtypeToDiscriminatorMap.GetValueOrDefault(type));
+        writer.WriteString(discriminatorName, subtypeToDiscriminatorMap.GetValueOrDefault(type));
         using var doc = JsonSerializer.SerializeToDocument(value, type, GetBaseOptions(options));
         foreach(var prop in doc.RootElement.EnumerateObject()) {
             writer.WritePropertyName(prop.Name);
