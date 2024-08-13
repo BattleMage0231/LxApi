@@ -31,9 +31,6 @@ public abstract class BaseEntriesController<T>(IEntriesService<T> entriesService
 
     [HttpPut("{id}")]
     public virtual async Task<IActionResult> Update(string id, T updatedEntry) {
-        if(updatedEntry.Id is not null) {
-            return BadRequest(error: new { error = "Request body should not contain entry id" });
-        }
         var entry = await _entriesService.GetByIdAsync(id);
         if(entry is null) {
             return NotFound();
