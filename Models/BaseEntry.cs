@@ -26,4 +26,6 @@ public abstract class BaseEntry {
     public List<string> Examples { get; set; } = [];
 
     public List<string> Synonyms { get; set; } = [];
+
+    public List<BaseForm> OtherForms { get; set; } = [];
 }

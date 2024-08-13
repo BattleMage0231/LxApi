@@ -11,7 +11,6 @@ public enum FRNumber {
     Singular, Plural
 }
 
-
 [BsonKnownTypes(typeof(FRNounEntry), typeof(FRVerbEntry), typeof(FRAdjectiveEntry), typeof(FRAdverbEntry), typeof(FRPrepositionEntry), typeof(FRArticleEntry), typeof(FRConjunctionEntry), typeof(FRPronounEntry), typeof(FROtherEntry))]
 [Polymorphic(nameof(Class))]
 [DerivedType(typeof(FRNounEntry), nameof(Class.Noun))]

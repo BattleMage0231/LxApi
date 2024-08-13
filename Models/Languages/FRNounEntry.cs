@@ -1,15 +1,11 @@
 namespace LxApi.Models.Languages;
 
-public class FRNounForm : BaseForm {
-    public FRGender? Gender { get; set; }
-
-    public FRNumber? Number { get; set; }
-}
+using FRForm = BaseForm;
 
 public class FRNounEntry : FREntry {
     public FRGender? MainGender { get; set; }
 
     public FRNumber? MainNumber { get; set; }
 
-    public List<FRNounForm> Forms { get; set; } = [];
+    public Dictionary<FRGender, Dictionary<FRNumber, FRForm>> MainForms { get; set; } = [];
 }

@@ -1,5 +1,7 @@
 namespace LxApi.Models.Languages;
 
+using FRForm = BaseForm;
+
 public enum FRPerson {
     FirstSingular, SecondSingular, ThirdSingular, FirstPlural, SecondPlural, ThirdPlural
 }
@@ -18,14 +20,8 @@ public enum FRVerbTransitivity {
     Transitive, Intransitive
 }
 
-public class FRVerbForm : BaseForm {
-    public FRPerson? Person;
-
-    public FRVerbConjugationType? Type;
-}
-
 public class FRVerbEntry : FREntry {
     public FRVerbTransitivity? Transitivity { get; set; }
 
-    public List<FRVerbForm> Forms { get; set; } = [];
+    public Dictionary<FRVerbConjugationType, Dictionary<FRPerson, FRForm>> MainForms { get; set; } = [];
 }

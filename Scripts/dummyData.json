@@ -1,603 +1,1054 @@
 [
     {
-        "_t": ["BaseEntry", "FREntry", "FRNounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRNounEntry"
+        ],
         "Class": "Noun",
         "Key": "chat",
         "Definition": "Un petit mammifère carnivore domestique.",
         "Notes": "Animal de compagnie courant.",
-        "Examples": ["Le chat dort sur le canapé.", "J'ai vu un chat noir."],
-        "Synonyms": ["félin", "minou"],
+        "Examples": [
+            "Le chat dort sur le canapé.",
+            "J'ai vu un chat noir."
+        ],
+        "Synonyms": [
+            "félin",
+            "minou"
+        ],
         "MainGender": "Masculine",
         "MainNumber": "Singular",
-        "Forms": [
-            {
-                "Key": "chats",
-                "Notes": "Forme plurielle.",
-                "Gender": "Masculine",
-                "Number": "Plural"
+        "MainForms": {
+            "Masculine": {
+                "Plural": {
+                    "Key": "chats",
+                    "Notes": "Forme plurielle."
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRVerbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRVerbEntry"
+        ],
         "Class": "Verb",
         "Key": "manger",
         "Definition": "Manger quelque chose.",
         "Notes": "Verbe régulier en -er.",
-        "Examples": ["Je mange une pomme.", "Ils mangent ensemble."],
-        "Synonyms": ["déguster", "consommer"],
+        "Examples": [
+            "Je mange une pomme.",
+            "Ils mangent ensemble."
+        ],
+        "Synonyms": [
+            "déguster",
+            "consommer"
+        ],
         "Transitivity": "Transitive",
-        "Forms": [
-            {
-                "Key": "Je mange",
-                "Notes": "Première personne du singulier au présent de l'indicatif.",
-                "Person": "FirstSingular",
-                "Type": "IndicativePresent"
-            },
-            {
-                "Key": "Nous mangeons",
-                "Notes": "Première personne du pluriel au présent de l'indicatif.",
-                "Person": "FirstPlural",
-                "Type": "IndicativePresent"
+        "MainForms": {
+            "IndicativePresent": {
+                "FirstSingular": {
+                    "Key": "Je mange",
+                    "Notes": "Première personne du singulier au présent de l'indicatif."
+                },
+                "FirstPlural": {
+                    "Key": "Nous mangeons",
+                    "Notes": "Première personne du pluriel au présent de l'indicatif."
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdjectiveEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdjectiveEntry"
+        ],
         "Class": "Adjective",
         "Key": "grand",
         "Definition": "De grande taille.",
         "Notes": "Adjectif irrégulier.",
-        "Examples": ["Un grand homme.", "Des grands arbres."],
-        "Synonyms": ["gros", "énorme"],
-        "Forms": [
-            {
-                "Key": "grande",
-                "Notes": "Féminin singulier.",
-                "Gender": "Feminine",
-                "Number": "Singular"
+        "Examples": [
+            "Un grand homme.",
+            "Des grands arbres."
+        ],
+        "Synonyms": [
+            "gros",
+            "énorme"
+        ],
+        "MainForms": {
+            "Feminine": {
+                "Singular": {
+                    "Key": "grande",
+                    "Notes": "Féminin singulier."
+                },
+                "Plural": {
+                    "Key": "grandes",
+                    "Notes": "Féminin pluriel."
+                }
             },
-            {
-                "Key": "grands",
-                "Notes": "Masculin pluriel.",
-                "Gender": "Masculine",
-                "Number": "Plural"
-            },
-            {
-                "Key": "grandes",
-                "Notes": "Féminin pluriel.",
-                "Gender": "Feminine",
-                "Number": "Plural"
+            "Masculine": {
+                "Plural": {
+                    "Key": "grands",
+                    "Notes": "Masculin pluriel."
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdverbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdverbEntry"
+        ],
         "Class": "Adverb",
         "Key": "rapidement",
         "Definition": "De manière rapide.",
         "Notes": "Dérivé de l'adjectif 'rapide'.",
-        "Examples": ["Il court rapidement.", "Elle a fini rapidement."],
-        "Synonyms": ["vite", "promptement"],
-        "Forms": []
+        "Examples": [
+            "Il court rapidement.",
+            "Elle a fini rapidement."
+        ],
+        "Synonyms": [
+            "vite",
+            "promptement"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRPrepositionEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRPrepositionEntry"
+        ],
         "Class": "Preposition",
         "Key": "avec",
         "Definition": "En compagnie de.",
         "Notes": "Indique l'accompagnement.",
-        "Examples": ["Je suis avec lui.", "Elle parle avec moi."],
-        "Synonyms": ["en compagnie de", "accompagné de"],
-        "Forms": []
+        "Examples": [
+            "Je suis avec lui.",
+            "Elle parle avec moi."
+        ],
+        "Synonyms": [
+            "en compagnie de",
+            "accompagné de"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRPronounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRPronounEntry"
+        ],
         "Class": "Pronoun",
         "Key": "nous",
         "Definition": "Pronom de la première personne du pluriel.",
         "Notes": "Utilisé pour désigner un groupe comprenant la personne qui parle.",
-        "Examples": ["Nous sommes prêts.", "Ils parlent de nous."],
-        "Synonyms": ["on", "nous-mêmes"],
-        "Forms": []
+        "Examples": [
+            "Nous sommes prêts.",
+            "Ils parlent de nous."
+        ],
+        "Synonyms": [
+            "on",
+            "nous-mêmes"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRArticleEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRArticleEntry"
+        ],
         "Class": "Article",
         "Key": "le",
         "Definition": "L'article défini masculin singulier.",
         "Notes": "Utilisé avant un nom masculin singulier.",
-        "Examples": ["Le chat est noir.", "Je vois le livre."],
+        "Examples": [
+            "Le chat est noir.",
+            "Je vois le livre."
+        ],
         "Synonyms": [],
-        "Forms": []
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRConjunctionEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRConjunctionEntry"
+        ],
         "Class": "Conjunction",
         "Key": "et",
         "Definition": "Et.",
         "Notes": "Utilisé pour connecter des mots, des phrases ou des clauses.",
-        "Examples": ["Elle et lui.", "Je mange et je bois."],
-        "Synonyms": ["ainsi que", "et aussi"],
-        "Forms": []
+        "Examples": [
+            "Elle et lui.",
+            "Je mange et je bois."
+        ],
+        "Synonyms": [
+            "ainsi que",
+            "et aussi"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRVerbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRVerbEntry"
+        ],
         "Class": "Verb",
         "Key": "être",
         "Definition": "Exister ou se trouver.",
         "Notes": "Verbe irrégulier.",
-        "Examples": ["Je suis heureux.", "Ils sont partis."],
-        "Synonyms": ["exister", "se trouver"],
+        "Examples": [
+            "Je suis heureux.",
+            "Ils sont partis."
+        ],
+        "Synonyms": [
+            "exister",
+            "se trouver"
+        ],
         "Transitivity": "Intransitive",
-        "Forms": [
-            {
-                "Key": "Je suis",
-                "Notes": "Première personne du singulier au présent de l'indicatif.",
-                "Person": "FirstSingular",
-                "Type": "IndicativePresent"
-            },
-            {
-                "Key": "Nous sommes",
-                "Notes": "Première personne du pluriel au présent de l'indicatif.",
-                "Person": "FirstPlural",
-                "Type": "IndicativePresent"
+        "MainForms": {
+            "IndicativePresent": {
+                "FirstSingular": {
+                    "Key": "Je suis",
+                    "Notes": "Première personne du singulier au présent de l'indicatif."
+                },
+                "FirstPlural": {
+                    "Key": "Nous sommes",
+                    "Notes": "Première personne du pluriel au présent de l'indicatif."
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdjectiveEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdjectiveEntry"
+        ],
         "Class": "Adjective",
         "Key": "bleu",
         "Definition": "De couleur bleue.",
         "Notes": "Adjectif régulier.",
-        "Examples": ["Un ciel bleu.", "Des yeux bleus."],
-        "Synonyms": ["azur", "céruléen"],
-        "Forms": [
-            {
-                "Key": "bleue",
-                "Notes": "Féminin singulier.",
-                "Gender": "Feminine",
-                "Number": "Singular"
+        "Examples": [
+            "Un ciel bleu.",
+            "Des yeux bleus."
+        ],
+        "Synonyms": [
+            "azur",
+            "céruléen"
+        ],
+        "MainForms": {
+            "Feminine": {
+                "Singular": {
+                    "Key": "bleue",
+                    "Notes": "Féminin singulier."
+                },
+                "Plural": {
+                    "Key": "bleues",
+                    "Notes": "Féminin pluriel."
+                }
             },
-            {
-                "Key": "bleus",
-                "Notes": "Masculin pluriel.",
-                "Gender": "Masculine",
-                "Number": "Plural"
-            },
-            {
-                "Key": "bleues",
-                "Notes": "Féminin pluriel.",
-                "Gender": "Feminine",
-                "Number": "Plural"
+            "Masculine": {
+                "Plural": {
+                    "Key": "bleus",
+                    "Notes": "Masculin pluriel."
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRNounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRNounEntry"
+        ],
         "Class": "Noun",
         "Key": "chien",
-        "Examples": ["Le chien aboie.", "Elle promène son chien."],
-        "Synonyms": ["canidé", "toutou"],
+        "Examples": [
+            "Le chien aboie.",
+            "Elle promène son chien."
+        ],
+        "Synonyms": [
+            "canidé",
+            "toutou"
+        ],
         "MainGender": "Masculine",
         "MainNumber": "Singular",
-        "Forms": [
-            {
-                "Key": "chiens",
-                "Gender": "Masculine",
-                "Number": "Plural"
+        "MainForms": {
+            "Masculine": {
+                "Plural": {
+                    "Key": "chiens"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRVerbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRVerbEntry"
+        ],
         "Class": "Verb",
         "Key": "parler",
         "Definition": "Communiquer avec des mots.",
-        "Examples": ["Je parle français.", "Ils parlent entre eux."],
+        "Examples": [
+            "Je parle français.",
+            "Ils parlent entre eux."
+        ],
         "Transitivity": "Intransitive",
-        "Forms": [
-            {
-                "Key": "Je parle",
-                "Person": "FirstSingular",
-                "Type": "IndicativePresent"
-            },
-            {
-                "Key": "Nous parlons",
-                "Person": "FirstPlural",
-                "Type": "IndicativePresent"
+        "MainForms": {
+            "IndicativePresent": {
+                "FirstSingular": {
+                    "Key": "Je parle"
+                },
+                "FirstPlural": {
+                    "Key": "Nous parlons"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdjectiveEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdjectiveEntry"
+        ],
         "Class": "Adjective",
         "Key": "rouge",
         "Definition": "De couleur rouge.",
-        "Examples": ["Une pomme rouge.", "Un mur rouge."],
-        "Synonyms": ["cramoisi", "écarlate"],
-        "Forms": [
-            {
-                "Key": "rouge",
-                "Gender": "Masculine",
-                "Number": "Singular"
-            },
-            {
-                "Key": "rouges",
-                "Gender": "Masculine",
-                "Number": "Plural"
+        "Examples": [
+            "Une pomme rouge.",
+            "Un mur rouge."
+        ],
+        "Synonyms": [
+            "cramoisi",
+            "écarlate"
+        ],
+        "MainForms": {
+            "Masculine": {
+                "Singular": {
+                    "Key": "rouge"
+                },
+                "Plural": {
+                    "Key": "rouges"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdverbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdverbEntry"
+        ],
         "Class": "Adverb",
         "Key": "lentement",
-        "Examples": ["Il marche lentement.", "Parle lentement s'il te plaît."],
-        "Synonyms": ["doucement", "paisiblement"],
-        "Forms": []
+        "Examples": [
+            "Il marche lentement.",
+            "Parle lentement s'il te plaît."
+        ],
+        "Synonyms": [
+            "doucement",
+            "paisiblement"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRPrepositionEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRPrepositionEntry"
+        ],
         "Class": "Preposition",
         "Key": "sans",
         "Definition": "Indique l'absence.",
-        "Examples": ["Je pars sans toi.", "Il vit sans peur."],
-        "Synonyms": ["dépourvu de", "privé de"],
-        "Forms": []
+        "Examples": [
+            "Je pars sans toi.",
+            "Il vit sans peur."
+        ],
+        "Synonyms": [
+            "dépourvu de",
+            "privé de"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRPronounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRPronounEntry"
+        ],
         "Class": "Pronoun",
         "Key": "lui",
-        "Examples": ["Je lui parle.", "Elle pense à lui."],
-        "Synonyms": ["à lui", "le"],
-        "Forms": []
+        "Examples": [
+            "Je lui parle.",
+            "Elle pense à lui."
+        ],
+        "Synonyms": [
+            "à lui",
+            "le"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRArticleEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRArticleEntry"
+        ],
         "Class": "Article",
         "Key": "un",
         "Definition": "Article indéfini masculin singulier.",
-        "Examples": ["Un chat est sur le toit.", "J'ai un ami."],
-        "Forms": []
+        "Examples": [
+            "Un chat est sur le toit.",
+            "J'ai un ami."
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRConjunctionEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRConjunctionEntry"
+        ],
         "Class": "Conjunction",
         "Key": "ou",
-        "Examples": ["Tu veux du café ou du thé?", "Venez demain ou après-demain."],
-        "Synonyms": ["ou bien", "sinon"],
-        "Forms": []
+        "Examples": [
+            "Tu veux du café ou du thé?",
+            "Venez demain ou après-demain."
+        ],
+        "Synonyms": [
+            "ou bien",
+            "sinon"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRVerbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRVerbEntry"
+        ],
         "Class": "Verb",
         "Key": "courir",
         "Definition": "Se déplacer rapidement.",
         "Transitivity": "Intransitive",
-        "Examples": ["Je cours tous les matins.", "Ils courent dans le parc."],
-        "Forms": [
-            {
-                "Key": "Je cours",
-                "Person": "FirstSingular",
-                "Type": "IndicativePresent"
-            },
-            {
-                "Key": "Nous courons",
-                "Person": "FirstPlural",
-                "Type": "IndicativePresent"
+        "Examples": [
+            "Je cours tous les matins.",
+            "Ils courent dans le parc."
+        ],
+        "MainForms": {
+            "IndicativePresent": {
+                "FirstSingular": {
+                    "Key": "Je cours"
+                },
+                "FirstPlural": {
+                    "Key": "Nous courons"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRNounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRNounEntry"
+        ],
         "Class": "Noun",
         "Key": "maison",
         "Notes": "Lieu de résidence.",
-        "Examples": ["La maison est grande.", "Nous avons acheté une nouvelle maison."],
-        "Synonyms": ["domicile", "habitation"],
+        "Examples": [
+            "La maison est grande.",
+            "Nous avons acheté une nouvelle maison."
+        ],
+        "Synonyms": [
+            "domicile",
+            "habitation"
+        ],
         "MainGender": "Feminine",
         "MainNumber": "Singular",
-        "Forms": [
-            {
-                "Key": "maisons",
-                "Gender": "Feminine",
-                "Number": "Plural"
+        "MainForms": {
+            "Feminine": {
+                "Plural": {
+                    "Key": "maisons"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdjectiveEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdjectiveEntry"
+        ],
         "Class": "Adjective",
         "Key": "petit",
-        "Examples": ["Un petit garçon.", "Une petite maison."],
-        "Synonyms": ["minuscule", "réduit"],
-        "Forms": [
-            {
-                "Key": "petite",
-                "Gender": "Feminine",
-                "Number": "Singular"
+        "Examples": [
+            "Un petit garçon.",
+            "Une petite maison."
+        ],
+        "Synonyms": [
+            "minuscule",
+            "réduit"
+        ],
+        "MainForms": {
+            "Feminine": {
+                "Singular": {
+                    "Key": "petite"
+                },
+                "Plural": {
+                    "Key": "petites"
+                }
             },
-            {
-                "Key": "petits",
-                "Gender": "Masculine",
-                "Number": "Plural"
-            },
-            {
-                "Key": "petites",
-                "Gender": "Feminine",
-                "Number": "Plural"
+            "Masculine": {
+                "Plural": {
+                    "Key": "petits"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdverbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdverbEntry"
+        ],
         "Class": "Adverb",
         "Key": "vite",
         "Definition": "Rapidement.",
-        "Examples": ["Parle vite.", "Elle a fini vite."],
-        "Synonyms": ["rapidement", "promptement"],
-        "Forms": []
+        "Examples": [
+            "Parle vite.",
+            "Elle a fini vite."
+        ],
+        "Synonyms": [
+            "rapidement",
+            "promptement"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRPrepositionEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRPrepositionEntry"
+        ],
         "Class": "Preposition",
         "Key": "sous",
-        "Examples": ["Le chat est sous la table.", "Je me cache sous le lit."],
-        "Synonyms": ["en dessous de", "au-dessous de"],
-        "Forms": []
+        "Examples": [
+            "Le chat est sous la table.",
+            "Je me cache sous le lit."
+        ],
+        "Synonyms": [
+            "en dessous de",
+            "au-dessous de"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRPronounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRPronounEntry"
+        ],
         "Class": "Pronoun",
         "Key": "elle",
         "Definition": "Pronom personnel féminin.",
-        "Examples": ["Elle est belle.", "Je l'ai vue hier."],
-        "Synonyms": ["à elle", "la"],
-        "Forms": []
+        "Examples": [
+            "Elle est belle.",
+            "Je l'ai vue hier."
+        ],
+        "Synonyms": [
+            "à elle",
+            "la"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRArticleEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRArticleEntry"
+        ],
         "Class": "Article",
         "Key": "les",
         "Definition": "Article défini pluriel.",
-        "Examples": ["Les enfants jouent.", "Je vois les fleurs."],
-        "Forms": []
+        "Examples": [
+            "Les enfants jouent.",
+            "Je vois les fleurs."
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRConjunctionEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRConjunctionEntry"
+        ],
         "Class": "Conjunction",
         "Key": "mais",
-        "Examples": ["Il veut venir, mais il ne peut pas.", "Je l'aime bien, mais..."],
-        "Synonyms": ["cependant", "pourtant"],
-        "Forms": []
+        "Examples": [
+            "Il veut venir, mais il ne peut pas.",
+            "Je l'aime bien, mais..."
+        ],
+        "Synonyms": [
+            "cependant",
+            "pourtant"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRVerbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRVerbEntry"
+        ],
         "Class": "Verb",
         "Key": "faire",
-        "Examples": ["Je fais mes devoirs.", "Nous faisons une promenade."],
-        "Synonyms": ["réaliser", "effectuer"],
+        "Examples": [
+            "Je fais mes devoirs.",
+            "Nous faisons une promenade."
+        ],
+        "Synonyms": [
+            "réaliser",
+            "effectuer"
+        ],
         "Transitivity": "Transitive",
-        "Forms": [
-            {
-                "Key": "Je fais",
-                "Person": "FirstSingular",
-                "Type": "IndicativePresent"
-            },
-            {
-                "Key": "Nous faisons",
-                "Person": "FirstPlural",
-                "Type": "IndicativePresent"
+        "MainForms": {
+            "IndicativePresent": {
+                "FirstSingular": {
+                    "Key": "Je fais"
+                },
+                "FirstPlural": {
+                    "Key": "Nous faisons"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRNounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRNounEntry"
+        ],
         "Class": "Noun",
         "Key": "école",
-        "Examples": ["L'école est fermée aujourd'hui.", "Je vais à l'école."],
-        "Synonyms": ["établissement scolaire", "institution"],
+        "Examples": [
+            "L'école est fermée aujourd'hui.",
+            "Je vais à l'école."
+        ],
+        "Synonyms": [
+            "établissement scolaire",
+            "institution"
+        ],
         "MainGender": "Feminine",
         "MainNumber": "Singular",
-        "Forms": [
-            {
-                "Key": "écoles",
-                "Gender": "Feminine",
-                "Number": "Plural"
+        "MainForms": {
+            "Feminine": {
+                "Plural": {
+                    "Key": "écoles"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdjectiveEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdjectiveEntry"
+        ],
         "Class": "Adjective",
         "Key": "heureux",
         "Definition": "État de contentement ou de satisfaction.",
-        "Examples": ["Il est très heureux.", "Une famille heureuse."],
-        "Synonyms": ["content", "joyeux"],
-        "Forms": [
-            {
-                "Key": "heureuse",
-                "Gender": "Feminine",
-                "Number": "Singular"
+        "Examples": [
+            "Il est très heureux.",
+            "Une famille heureuse."
+        ],
+        "Synonyms": [
+            "content",
+            "joyeux"
+        ],
+        "MainForms": {
+            "Feminine": {
+                "Singular": {
+                    "Key": "heureuse"
+                },
+                "Plural": {
+                    "Key": "heureuses"
+                }
             },
-            {
-                "Key": "heureux",
-                "Gender": "Masculine",
-                "Number": "Plural"
-            },
-            {
-                "Key": "heureuses",
-                "Gender": "Feminine",
-                "Number": "Plural"
+            "Masculine": {
+                "Plural": {
+                    "Key": "heureux"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdverbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdverbEntry"
+        ],
         "Class": "Adverb",
         "Key": "souvent",
-        "Examples": ["Je viens souvent ici.", "Elle lit souvent."],
-        "Synonyms": ["fréquemment", "régulièrement"],
-        "Forms": []
+        "Examples": [
+            "Je viens souvent ici.",
+            "Elle lit souvent."
+        ],
+        "Synonyms": [
+            "fréquemment",
+            "régulièrement"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRPrepositionEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRPrepositionEntry"
+        ],
         "Class": "Preposition",
         "Key": "chez",
-        "Examples": ["Je vais chez le médecin.", "Elle est chez elle."],
-        "Synonyms": ["au domicile de", "à la résidence de"],
-        "Forms": []
+        "Examples": [
+            "Je vais chez le médecin.",
+            "Elle est chez elle."
+        ],
+        "Synonyms": [
+            "au domicile de",
+            "à la résidence de"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRPronounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRPronounEntry"
+        ],
         "Class": "Pronoun",
         "Key": "toi",
-        "Examples": ["C'est pour toi.", "Je pense à toi."],
-        "Synonyms": ["tu", "te"],
-        "Forms": []
+        "Examples": [
+            "C'est pour toi.",
+            "Je pense à toi."
+        ],
+        "Synonyms": [
+            "tu",
+            "te"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRArticleEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRArticleEntry"
+        ],
         "Class": "Article",
         "Key": "des",
-        "Examples": ["Des amis sont venus.", "Je veux des pommes."],
-        "Forms": []
+        "Examples": [
+            "Des amis sont venus.",
+            "Je veux des pommes."
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRConjunctionEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRConjunctionEntry"
+        ],
         "Class": "Conjunction",
         "Key": "ni",
-        "Examples": ["Je ne veux ni café ni thé.", "Il n'a ni argent ni temps."],
-        "Synonyms": ["et pas", "non plus"],
-        "Forms": []
+        "Examples": [
+            "Je ne veux ni café ni thé.",
+            "Il n'a ni argent ni temps."
+        ],
+        "Synonyms": [
+            "et pas",
+            "non plus"
+        ],
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRVerbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRVerbEntry"
+        ],
         "Class": "Verb",
         "Key": "aimer",
         "Definition": "Éprouver de l'amour ou de l'affection.",
-        "Examples": ["J'aime les fleurs.", "Ils aiment voyager."],
-        "Synonyms": ["adorer", "chérir"],
+        "Examples": [
+            "J'aime les fleurs.",
+            "Ils aiment voyager."
+        ],
+        "Synonyms": [
+            "adorer",
+            "chérir"
+        ],
         "Transitivity": "Transitive",
-        "Forms": [
-            {
-                "Key": "J'aime",
-                "Person": "FirstSingular",
-                "Type": "IndicativePresent"
-            },
-            {
-                "Key": "Nous aimons",
-                "Person": "FirstPlural",
-                "Type": "IndicativePresent"
+        "MainForms": {
+            "IndicativePresent": {
+                "FirstSingular": {
+                    "Key": "J'aime"
+                },
+                "FirstPlural": {
+                    "Key": "Nous aimons"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRNounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRNounEntry"
+        ],
         "Class": "Noun",
         "Key": "ame",
         "Definition": "Principe spirituel de l'être humain.",
-        "Examples": ["L'âme est immortelle.", "Elle a une belle âme."],
-        "Synonyms": ["esprit", "psyché"],
+        "Examples": [
+            "L'âme est immortelle.",
+            "Elle a une belle âme."
+        ],
+        "Synonyms": [
+            "esprit",
+            "psyché"
+        ],
         "MainGender": "Feminine",
         "MainNumber": "Singular",
-        "Forms": [
-            {
-                "Key": "âmes",
-                "Gender": "Feminine",
-                "Number": "Plural"
+        "MainForms": {
+            "Feminine": {
+                "Plural": {
+                    "Key": "âmes"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRVerbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRVerbEntry"
+        ],
         "Class": "Verb",
         "Key": "amener",
         "Definition": "Faire venir quelqu'un quelque part.",
-        "Examples": ["J'amène mes amis à la fête.", "Elle amène ses enfants à l'école."],
-        "Synonyms": ["conduire", "emmener"],
+        "Examples": [
+            "J'amène mes amis à la fête.",
+            "Elle amène ses enfants à l'école."
+        ],
+        "Synonyms": [
+            "conduire",
+            "emmener"
+        ],
         "Transitivity": "Transitive",
-        "Forms": [
-            {
-                "Key": "J'amène",
-                "Person": "FirstSingular",
-                "Type": "IndicativePresent"
-            },
-            {
-                "Key": "Nous amenons",
-                "Person": "FirstPlural",
-                "Type": "IndicativePresent"
+        "MainForms": {
+            "IndicativePresent": {
+                "FirstSingular": {
+                    "Key": "J'amène"
+                },
+                "FirstPlural": {
+                    "Key": "Nous amenons"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRAdjectiveEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRAdjectiveEntry"
+        ],
         "Class": "Adjective",
         "Key": "aimable",
         "Definition": "Qui est agréable ou gentil.",
-        "Examples": ["Elle est très aimable.", "Un geste aimable."],
-        "Synonyms": ["agréable", "charmant"],
-        "Forms": [
-            {
-                "Key": "aimables",
-                "Gender": "Masculine",
-                "Number": "Plural"
+        "Examples": [
+            "Elle est très aimable.",
+            "Un geste aimable."
+        ],
+        "Synonyms": [
+            "agréable",
+            "charmant"
+        ],
+        "MainForms": {
+            "Masculine": {
+                "Plural": {
+                    "Key": "aimables"
+                }
             },
-            {
-                "Key": "aimable",
-                "Gender": "Feminine",
-                "Number": "Singular"
+            "Feminine": {
+                "Singular": {
+                    "Key": "aimable"
+                }
             }
-        ]
+        },
+        "OtherForms": []
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRVerbEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRVerbEntry"
+        ],
         "Class": "Verb",
         "Key": "améliorer",
         "Definition": "Rendre quelque chose meilleur.",
-        "Examples": ["Je veux améliorer mes compétences.", "Il a amélioré son français."],
-        "Synonyms": ["perfectionner", "progresser"],
+        "Examples": [
+            "Je veux améliorer mes compétences.",
+            "Il a amélioré son français."
+        ],
+        "Synonyms": [
+            "perfectionner",
+            "progresser"
+        ],
         "Transitivity": "Transitive",
-        "Forms": [
-            {
-                "Key": "J'améliore",
-                "Person": "FirstSingular",
-                "Type": "IndicativePresent"
+        "MainForms": {
+            "IndicativePresent": {
+                "FirstSingular": {
+                    "Key": "J'améliore"
+                },
+                "FirstPlural": {
+                    "Key": "Nous améliorons"
+                }
+            }
+        },
+        "OtherForms": []
+    },
+    {
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRNounEntry"
+        ],
+        "Class": "Noun",
+        "Key": "ami",
+        "Definition": "Personne avec qui on a une relation d'amitié.",
+        "Examples": [
+            "Mon meilleur ami.",
+            "Elle a beaucoup d'amis."
+        ],
+        "Synonyms": [
+            "camarade",
+            "copain"
+        ],
+        "MainGender": "Masculine",
+        "MainNumber": "Singular",
+        "MainForms": {
+            "Masculine": {
+                "Plural": {
+                    "Key": "amis"
+                }
             },
+            "Feminine": {
+                "Singular": {
+                    "Key": "amie"
+                },
+                "Plural": {
+                    "Key": "amies"
+                }
+            }
+        },
+        "OtherForms": []
+    },
+    {
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRNounEntry"
+        ],
+        "Class": "Noun",
+        "Key": "table",
+        "Definition": "Meuble avec une surface plane, utilisé pour manger, écrire, etc.",
+        "Examples": [
+            "La table est en bois.",
+            "Ils ont mis les livres sur la table."
+        ],
+        "Synonyms": [
+            "bureau",
+            "comptoir"
+        ],
+        "MainForms": {},
+        "OtherForms": [
             {
-                "Key": "Nous améliorons",
-                "Person": "FirstPlural",
-                "Type": "IndicativePresent"
+                "Key": "tables",
+                "Notes": "Plural form."
             }
         ]
     },
     {
-        "_t": ["BaseEntry", "FREntry", "FRNounEntry"],
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRVerbEntry"
+        ],
+        "Class": "Verb",
+        "Key": "regarder",
+        "Definition": "Porter son attention visuelle sur quelque chose.",
+        "Examples": [
+            "Je regarde la télévision.",
+            "Ils regardent le film."
+        ],
+        "Synonyms": [
+            "observer",
+            "voir"
+        ],
+        "MainForms": {},
+        "OtherForms": [
+            {
+                "Key": "Je regarde"
+            },
+            {
+                "Key": "Ils regardent"
+            }
+        ]
+    },
+    {
+        "_t": [
+            "BaseEntry",
+            "FREntry",
+            "FRNounEntry"
+        ],
         "Class": "Noun",
-        "Key": "ami",
-        "Definition": "Personne avec qui on a une relation d'amitié.",
-        "Examples": ["Mon meilleur ami.", "Elle a beaucoup d'amis."],
-        "Synonyms": ["camarade", "copain"],
-        "MainGender": "Masculine",
-        "MainNumber": "Singular",
-        "Forms": [
+        "Key": "chaise",
+        "Definition": "Siège avec un dossier, pour une personne.",
+        "Examples": [
+            "Elle est assise sur une chaise.",
+            "Ils ont acheté des chaises neuves."
+        ],
+        "Synonyms": [
+            "fauteuil",
+            "siège"
+        ],
+        "MainForms": {},
+        "OtherForms": [
             {
-                "Key": "amis",
-                "Gender": "Masculine",
-                "Number": "Plural"
-            },
-            {
-                "Key": "amie",
-                "Gender": "Feminine",
-                "Number": "Singular"
-            },
-            {
-                "Key": "amies",
-                "Gender": "Feminine",
-                "Number": "Plural"
+                "Key": "chaises",
+                "Notes": "Plural form."
             }
         ]
     }
