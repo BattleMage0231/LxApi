@@ -32,6 +32,6 @@ public class FRPronounEntry : FREntry {
 
 public class FROtherForm : BaseForm {}
 
-public class FRPOtherEntry : FREntry {
+public class FROtherEntry : FREntry {
     public List<FROtherForm> Forms { get; set; } = [];
 }
