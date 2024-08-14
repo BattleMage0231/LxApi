@@ -5,12 +5,18 @@ using LxApi.Controllers;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Bson.Serialization.Conventions;
 
 var pack = new ConventionPack {
     new EnumRepresentationConvention(BsonType.String)
 };
 ConventionRegistry.Register("EnumStringConvention", pack, t => true);
+BsonSerializer.RegisterSerializer(new EnumSerializer<FRGender>(BsonType.String));
+BsonSerializer.RegisterSerializer(new EnumSerializer<FRNumber>(BsonType.String));
+BsonSerializer.RegisterSerializer(new EnumSerializer<FRPerson>(BsonType.String));
+BsonSerializer.RegisterSerializer(new EnumSerializer<FRVerbConjugationType>(BsonType.String));
 
 var builder = WebApplication.CreateBuilder(args);
 
