@@ -16,7 +16,7 @@ public class SearchService<T>(IMongoService mongo) : ISearchService<T> where T :
         var normalizedString = NormalizeKey(searchString);
         var list = (await _entryCollection.DistinctAsync(
             entry => entry.Key,
-            entry => entry is T && entry.NormalizedKey.StartsWith(normalizedString)
+            entry => entry is T && entry.NormalizedKey!.StartsWith(normalizedString)
         )).ToList();
         return list[0..Math.Min(limit, list.Count)];
     }

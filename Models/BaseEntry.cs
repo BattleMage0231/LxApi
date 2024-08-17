@@ -19,7 +19,7 @@ public abstract class BaseEntry {
 
     public string Key { get; set; } = null!;
 
-    public string NormalizedKey { get; set; } = null!;
+    public string? NormalizedKey { get; set; }
 
     public string? Definition { get; set; }
 
