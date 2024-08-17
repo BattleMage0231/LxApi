@@ -8,9 +8,11 @@ namespace LxApi.Controllers;
 public abstract class BaseSearchController<T>(ISearchService<T> searchService) : ControllerBase where T : BaseEntry {
     private readonly ISearchService<T> _searchService = searchService;
 
-    [HttpGet("complete")]
-    public virtual async Task<List<T>> Complete(string searchString) => await  _searchService.CompleteAsync(searchString);
+    private const int SuggestLimit = 10;
+
+    [HttpGet("suggest")]
+    public virtual async Task<List<string>> Suggest(string searchString) => await _searchService.SuggestAsync(searchString, SuggestLimit);
 
     [HttpGet("search")]
-    public virtual async Task<List<T>> Search(string searchString) => await  _searchService.SearchAsync(searchString);
+    public virtual async Task<List<T>> Search(string searchString) => await _searchService.SearchAsync(searchString);
 }

@@ -2,12 +2,16 @@ using LxApi.Models;
 using LxApi.Models.Languages;
 using LxApi.Services;
 using LxApi.Controllers;
+using System.Text;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Bson.Serialization.Conventions;
+
+var provider = CodePagesEncodingProvider.Instance;
+Encoding.RegisterProvider(provider);
 
 var pack = new ConventionPack {
     new EnumRepresentationConvention(BsonType.String)

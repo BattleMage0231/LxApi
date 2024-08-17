@@ -35,7 +35,6 @@ public abstract class BaseEntriesController<T>(IEntriesService<T> entriesService
         if(entry is null) {
             return NotFound();
         }
-        updatedEntry.Id = entry.Id;
         await _entriesService.UpdateAsync(id, updatedEntry);
         return NoContent();
     }
